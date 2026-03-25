@@ -7,6 +7,7 @@ import { BusinessLineModule } from './business-lines/business-lines.module';
 import { AvailabilityModule } from './availability/availability.module';
 import { AppointmentsModule } from './appointments/appointments.module';
 import { IntegrationsModule } from './integrations/integrations.module';
+import { SlotsModule } from './slots/slots.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { IntegrationsModule } from './integrations/integrations.module';
     AvailabilityModule,
     AppointmentsModule,
     IntegrationsModule,
+    SlotsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

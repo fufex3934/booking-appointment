@@ -18,4 +18,16 @@ export class UsersService {
   findById(id: string) {
     return this.userModel.findById(id);
   }
+
+  async updateZoomToken(userId: string, zoomData: {
+  accessToken: string;
+  refreshToken: string;
+  expiryDate: number;
+}) {
+  return this.userModel.findByIdAndUpdate(
+    userId,
+    { zoomOAuth: zoomData },
+    { new: true }
+  );
+}
 }
